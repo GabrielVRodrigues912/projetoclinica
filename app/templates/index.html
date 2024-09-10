@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ligando o CSS externo -->
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registro de Novos Pacientes</h2>
+        <form action="/paciente" method="post">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="CPF">CPF:</label>
+            <input type="text" id="CPF" name="CPF" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="XXX.XXX.XXX-XX" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="XX-XXXXX-XXXX" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" name="logradouro" required>
+
+            <label for="linha_de_endereco1">Linha de Endereço 1:</label>
+            <input type="text" id="linha_de_endereco1" name="linha_de_endereco1" required>
+
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" required>
+
+            <button type="submit">Registrar Paciente</button>
+        </form>
+    </div>
+
+</body>
+</html>
